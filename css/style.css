@@ -103,7 +103,8 @@ header {
 
 }
 
-@media screen and (min-width: 1200px) {
+@media print {
+/* @media screen and (min-width: 1200px) { */
     .body {
         background-image: none;
     }
