@@ -7,16 +7,13 @@ body {
     background-color: #f1f1f1;
 }
 
-/* #logo {
-    display: flex;
-    justify-content: center;
-} */
-
-header {
+/* header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    position: sticky
+    position: sticky;
+    flex-direction: row;
+    align-items: stretch;
 }
 
 nav {
@@ -24,18 +21,29 @@ nav {
     flex-direction: row;
     justify-content: center;
     /* align-self: stretch; */
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* nav {
+.nav_links {
     display: flex;
-    flex-basis: auto;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+/* .nav_links {
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    flex-flow: wrap;
+
 } */
 
-.nav_links, a, .nav_links, a:visited{
+a, a:visited {
+/* .nav_links, a, .nav_links, a:visited{ */
     color: blue;
 }
 
@@ -58,6 +66,7 @@ nav {
     justify-content: center;
     /* flex-basis: 450px; */
 }
+
 
 #image1, #image2, #image3, #image4, #image5 {
     border: solid 10px #50C7C7;
@@ -92,13 +101,23 @@ nav {
     .card {
         flex-basis: 250px;
     }
-    header, .nav_links {
+    header {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        flex-direction: column;
-        flex-flow: wrap;
-        position:-webkit-sticky;
+        flex-direction: row;
+        position:sticky;
+        top: 0;
+        width: 100%;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+    /* header:nth-child(2) {
+        position: sticky;
+    } */
+    .card header {
+        position: static;
     }
 
 }
@@ -108,11 +127,19 @@ nav {
     body {
         background-image: none;
     }
-    nav, .nav_links {
+    /* nav, .nav_links {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
         flex-wrap:nowrap;
+    } */
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav {
+        width: 75%;
     }
     .pricing {
         /* align-self:flex-end; */
