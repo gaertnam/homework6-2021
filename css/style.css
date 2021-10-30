@@ -14,14 +14,14 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: center;
+    position: sticky
 }
 
-.nav_links {
+nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     /* align-self: stretch; */
 }
@@ -105,14 +105,15 @@ header {
 
 @media print {
 /* @media screen and (min-width: 1200px) { */
-    .body {
+    body {
         background-image: none;
     }
-    /* nav, .nav_links {
+    nav, .nav_links {
         flex-direction: row;
         justify-content: space-around;
-        flex-wrap: wrap;
-    } */
+        align-items: flex-end;
+        flex-wrap:nowrap;
+    }
     .pricing {
         /* align-self:flex-end; */
         align-items: flex-end;
@@ -131,9 +132,7 @@ header {
 
 
 @media all and (prefers-reduced-motion:reduce){
-	img{
+	#logo {
 		animation: none;
-		transition: none;
-		box-sizing: border-box;
 	}
 }
